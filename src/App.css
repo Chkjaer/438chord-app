@@ -37,3 +37,11 @@ button:hover {
   color: red;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.soundBtn{
+  align-items: center;
+}

@@ -1,6 +1,7 @@
 /* global scales_chords_api_onload */
 
 import React, { useState, useEffect } from "react";
+import { Scale } from "tone";
 const ChordGenerator = () => {
   const [chordName, setChordName] = useState(null); // State to store the chord data
   const [error, setError] = useState(null);
@@ -60,19 +61,23 @@ const ChordGenerator = () => {
   
   return (
     <section>
-    <button onClick={generateChord}>Generate Chord</button>
-    {loading && <p>Fetching your chord...</p>}
-      {chordName ? (
-        <div>
-          <h3>Chord: {chordName}</h3>
-        <ins
-          className="scales_chords_api"
-          chord={chordName}
-        ></ins>
-        </div>
+      <div className="ChordArea">
+      <button onClick={generateChord}>Generate Chord</button>
+      {loading && <p>Fetching your chord...</p>}
+        {chordName ? (
+          <><h3>Chord: {chordName}</h3><ins
+            className="scales_chords_api"
+            chord={chordName}
+          ></ins></>
       ) : (
         <p>No Chord Yet.</p>
       )}
+        </div>
+        <ins
+          className="scales_chords_api"
+          chord={chordName}
+          output="sound">
+        </ins>
       {error && <p className="error">{error}</p>}
       </section>
   );
