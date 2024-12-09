@@ -1,32 +1,114 @@
 .App {
-  font-family: Arial, sans-serif;
+  font-family: "Parkinsans", sans-serif;
   text-align: center;
 }
 
+h1 {
+  font-family: "Parkinsans", sans-serif;
+  font-size: 36px; /* Large font size */
+  font-weight: 450; /* Semi-bold font weight */
+  color: #ffffff;
+  letter-spacing: 1px; /* Add spacing between letters */
+  padding-left: 20px; /* Add space between the edge of the screen and the title */
+  padding-right: 20px; /* Add space on the other side too */
+  box-sizing: border-box; /* Include padding in width calculation */
+  display: flex;
+  align-items: center;
+}
+
+
+h2 {
+  font-family: "Parkinsans", sans-serif;
+  font-size: 25px; /* Large font size */
+  font-weight: 450; /* Semi-bold font weight */
+  color: #000000; /* Green color */
+  letter-spacing: 1px; /* Add spacing between letters */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+
 header {
-  background-color: #3f1079;
-  color: rgb(162, 157, 255);
-  padding: 10px;
+  background-color: #000000;
+  color: rgb(139, 133, 255);
+  padding: 2px;
+  display: flex;
+  height: 80px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Account-Group {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 10px; /* Space between the elements */
+}
+
+.Account-Group h4 {
+  margin: 0; /* Remove any extra margin */
+  font-size: 16px; /* Adjust font size if needed */
+  color: #ffffff; /* Set color for text */
+}
+
+.header-btn {
+  border: none; /* Remove border */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 20px; /* Larger padding for better clickability */
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px; /* Rounded corners */
+  margin: 10px 10px; /* Vertical margin for spacing */
+  display: inline-block; /* Ensure it doesn't stretch to full width */
+}
+
+.header-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+  color: white; /* Keep white text on hover */
+}
+
+.header-btn:focus {
+  outline: none; /* Remove outline when focused */
+  box-shadow: 0 0 0 3px rgba(72, 168, 88, 0.5); /* Add a subtle green shadow */
 }
 
 main {
   margin: 20px;
 }
 
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 button:hover {
   background-color: #0056b3;
 }
 
+.chordCategorySelector {
+  font-family: "parkinsans", sans-serif !important;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #4CAF50; /* Green border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #4CAF50; /* Solid green background */
+  color: white; /* White text */
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 20px; /* Space below the selector */
+}
+
+.chordCategorySelector select {
+  font-family: "parkinsans", sans-serif !important;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: transparent; /* Remove background to keep the parent background */
+  color: white; /* White text */
+  font-size: 16px;
+  border-radius: 25px; /* Match the rounded corners */
+  cursor: pointer;
+}
+
+.chordCategorySelector select:hover {
+  background-color: #45a049; /* Darker green on hover */
+
+}
 .chord-display {
   margin: 20px 0;
   font-size: 1.5rem;
@@ -40,8 +122,149 @@ button:hover {
 section {
   display: flex;
   flex-direction: column;
+  background-image: linear-gradient(to bottom right, #ffe5a4, rgb(59, 226, 255));
 }
 
 .soundBtn{
   align-items: center;
 }
+
+
+.login-container {
+  background-image: linear-gradient(to bottom right, rgb(136, 0, 255), rgb(255, 0, 217));
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-box {
+  width: 400px;
+  height: 300px; 
+  background-color: #ffffff; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid ;
+  border-color: #333333;
+}
+.login-box form { 
+  width: 95%;
+  height: 95%;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.login-box button{
+  width: 100%;
+}
+.login-box h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333333;
+  justify-content: left;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-group label{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.input-group input{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* General Styling */
+section {
+  font-family: "Parkinsans", sans-serif;
+  background-color: #fff7e3;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+button {
+  font-family: "parkinsans", sans-serif !important;
+  border: none; /* Remove border */
+  background-color: #4CAF50; /* Solid green background */
+  color: white; /* White text */
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px; /* More rounded corners */
+  margin: 5px 0;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  color: white; /* Ensure text remains white */
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+h3 {
+  color: #4caf50;
+  font-size: 24px;
+}
+
+.ChordArea {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 3px solid orange;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px;
+  background: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+ul li:nth-child(even) {
+  background: #f1f8e9;
+}
+
+ins.scales_chords_api button {
+  width: auto !important;
+  height: 45px !important;
+  font-size: 18px;
+  color: #333;
+  border-radius: 8px;
+  padding: 22px 22px;
+  border: 2px solid green !important;
+}
+

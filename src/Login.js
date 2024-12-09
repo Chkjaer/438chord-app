@@ -30,7 +30,7 @@ function Login() {
         <div className='login-container'>
             <div className='login-box'>
             <form onSubmit={LoginUser}>
-            <h1>Log In</h1>
+            <h2>Log In</h2>
             <div className='input-group'>
                 <label htmlFor="email">Email: </label>
                 <input

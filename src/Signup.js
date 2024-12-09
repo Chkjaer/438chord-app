@@ -31,7 +31,7 @@ function Signup() {
     <div className="login-container">
       <div className="login-box">
         <form onSubmit={SignUpUser}>
-        <h1>Sign Up</h1>
+        <h2>Sign Up</h2>
           <div className="input-group">
             <label htmlFor="email">Email:</label>
             <input
