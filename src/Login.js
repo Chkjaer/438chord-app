@@ -59,6 +59,9 @@ function Login() {
             <p className="signup-link">
           New user? <Link to="/signup">Sign up here</Link>
         </p>
+        <p className="guest-link">
+           <Link to="/">Continue as guest</Link>
+        </p>
         </div>
       </div>
     );

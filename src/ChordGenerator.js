@@ -172,19 +172,19 @@ const ChordGenerator = ({ user, addChordToList, savedChords, displayedChord}) =>
             className="scales_chords_api"
             chord={chordName}
           ></ins>
-          <button onClick={saveChord} style={{margin: "20px"}}>Save Chord</button>
+          <button onClick={saveChord}>Save Chord</button>
           <ins
           className="scales_chords_api"
           chord={chordName}
           output="sound"
-          style={{border: "1px green !important;", offsetposition: "15px top;"}}>
+          >
         </ins>
           </div>
       ) : (
         <p>No Chord Yet.</p>
       )}
         </div>
-      {error && <p className="error">{error}</p>}
+        {error && <p className="error">{error}</p>}
       </section>
   );
 }

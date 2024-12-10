@@ -20,7 +20,7 @@ h1 {
 h2 {
   font-family: "Parkinsans", sans-serif;
   font-size: 25px; /* Large font size */
-  font-weight: 450; /* Semi-bold font weight */
+  font-weight: 300; /* Semi-bold font weight */
   color: #000000; /* Green color */
   letter-spacing: 1px; /* Add spacing between letters */
   box-sizing: border-box; /* Include padding in width calculation */
@@ -30,7 +30,6 @@ h2 {
 header {
   background-color: #000000;
   color: rgb(139, 133, 255);
-  padding: 2px;
   display: flex;
   height: 80px;
   flex-direction: row;
@@ -45,6 +44,7 @@ header {
 
 .Account-Group h4 {
   margin: 0; /* Remove any extra margin */
+  font-weight: 100;
   font-size: 16px; /* Adjust font size if needed */
   color: #ffffff; /* Set color for text */
 }
@@ -85,7 +85,7 @@ button:hover {
   width: 100%;
   padding: 10px;
   border: 2px solid #4CAF50; /* Green border */
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 15px; /* Rounded corners */
   background-color: #4CAF50; /* Solid green background */
   color: white; /* White text */
   font-size: 16px;
@@ -98,10 +98,10 @@ button:hover {
   width: 100%;
   padding: 10px;
   border: none;
-  background-color: transparent; /* Remove background to keep the parent background */
+  background-color: green; /* Remove background to keep the parent background */
   color: white; /* White text */
   font-size: 16px;
-  border-radius: 25px; /* Match the rounded corners */
+  border-radius: 15px; /* Match the rounded corners */
   cursor: pointer;
 }
 
@@ -114,7 +114,22 @@ button:hover {
   font-size: 1.5rem;
   color: #333;
 }
+/* Ensure the ins tag and its content fit within the screen */
+.scales_chords_api {
+  display: block !important; /* Ensure it behaves like a block-level element */
+  max-width: 100% !important; /* Restrict the width to the screen size */
+  height: auto !important; /* Maintain aspect ratio */
+  margin: 0 auto !important; /* Center the element horizontally */
+  overflow: hidden !important; /* Prevent overflow issues */
+  box-sizing: border-box !important; /* Include padding in dimensions */
+}
 
+.scales_chords_api img {
+  max-width: 100% !important; /* Make images responsive */
+  height: auto !important; /* Maintain aspect ratio */
+  display: block !important; /* Prevent inline behavior */
+  margin: 0 auto !important; /* Center the image */
+}
 .error{
   color: red;
 }
@@ -131,7 +146,7 @@ section {
 
 
 .login-container {
-  background-image: linear-gradient(to bottom right, rgb(136, 0, 255), rgb(255, 0, 217));
+  background-image: linear-gradient(to bottom right, rgb(236, 216, 255), rgb(212, 95, 255));
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -139,6 +154,7 @@ section {
 }
 
 .login-box {
+  margin-top: 20px;
   width: 400px;
   height: 300px; 
   background-color: #ffffff; 
@@ -220,9 +236,13 @@ button:hover {
 }
 
 .error {
-  color: red;
+  color: rgb(0, 0, 0);
   font-size: 14px;
-  margin-top: 10px;
+  background-color: rgb(252, 216, 216);
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 2px solid red;
+  border-radius: 10px;
 }
 
 h3 {
@@ -265,6 +285,101 @@ ins.scales_chords_api button {
   color: #333;
   border-radius: 8px;
   padding: 22px 22px;
-  border: 2px solid green !important;
 }
 
+/* Mobile-first styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Parkinsans', sans-serif;
+}
+
+footer {
+  margin-top: 5px;
+}
+
+.login-box p {
+  margin-bottom: 2px;
+}
+
+.guest-link {
+  margin-top: 0;
+  padding-bottom: 10px;
+  font-size: 12px;
+}
+
+/* For small screens (e.g., mobile phones) */
+@media (max-width: 730px) {
+
+  footer {
+    font-size: smaller;
+    margin-top: 5px;
+  }
+
+    button {
+      width: 80%; /* Reduce width for smaller screens */
+      padding: 12px 15px; /* Adjust padding */
+      font-size: 14px; /* Reduce font size */
+    }
+  .App-header h1 {
+    margin: 2px;
+    font-size: 26px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .header-btn {
+    padding: 10px;
+    margin: 5px 0;
+    width: 90%;
+  }
+
+  .ChordArea {
+    padding: 10px;
+    margin: 10px;
+    max-width: 90%;
+  }
+
+  .login-box {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .login-container {
+    height: auto;
+    padding: 10px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .Account-Group {
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+}

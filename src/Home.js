@@ -97,7 +97,7 @@ function Home() {
 return (
     <div className="App">
       <header className="App-header">
-      <h1>Chord Declogger</h1>
+      <h1>Chord Unblock</h1>
       {!user ? (
         <div className="Account-Group">
           <h4>Sign-in to Save Chords!</h4>
@@ -134,6 +134,7 @@ return (
             </div>
           )}
         </div>
+        <footer> Chords and Sounds powered by <a href="https://www.scales-chords.com/api/">Scales-Chords-API</a></footer>
       </div>
     );
 }
