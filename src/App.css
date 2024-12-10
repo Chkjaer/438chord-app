@@ -59,6 +59,7 @@ header {
   cursor: pointer;
   border-radius: 20px; /* Rounded corners */
   margin: 10px 10px; /* Vertical margin for spacing */
+  margin-left: 0;
   display: inline-block; /* Ensure it doesn't stretch to full width */
 }
 
@@ -311,22 +312,38 @@ footer {
 /* For small screens (e.g., mobile phones) */
 @media (max-width: 730px) {
 
+  .error {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    background-color: rgb(252, 216, 216);
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 2px solid red;
+    border-radius: 10px;
+  }
+
   footer {
     font-size: smaller;
     margin-top: 5px;
   }
 
-    button {
-      width: 80%; /* Reduce width for smaller screens */
-      padding: 12px 15px; /* Adjust padding */
-      font-size: 14px; /* Reduce font size */
-    }
+  button {
+    width: 80%; /* Reduce width for smaller screens */
+    padding: 12px 15px; /* Adjust padding */
+    font-size: 14px; /* Reduce font size */
+  }
+
   .App-header h1 {
     margin: 2px;
-    font-size: 26px;
+    font-size: 32px;
     padding-left: 10px;
     padding-right: 10px;
     text-align: left;
+  }
+
+  .Account-Group h4 {
+    font-size: 12px;
+    margin-bottom: 0px;
   }
 
   h2 {
@@ -342,7 +359,8 @@ footer {
 
   .header-btn {
     padding: 10px;
-    margin: 5px 0;
+    margin-bottom: 5px;
+    margin-top: 0px;
     width: 90%;
   }
 

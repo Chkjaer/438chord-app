@@ -100,7 +100,7 @@ return (
       <h1>Chord Unblock</h1>
       {!user ? (
         <div className="Account-Group">
-          <h4>Sign-in to Save Chords!</h4>
+          <h4>Sign-in to Save Chords</h4>
           <button className="header-btn" onClick={() => navigate("/login")}>Login</button>
           </div>
       ) : (
